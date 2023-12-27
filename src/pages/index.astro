@@ -19,7 +19,7 @@ import 'highlight.js/styles/atom-one-dark.css'
 <script>
 async function checkCurrentAuth() {
   const password = localStorage.getItem('pass')
-  const response = await fetch('/api/auth', {
+  const response = await fetch(import.meta.env.ASSETS_PREFIX +'/api/auth', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -30,7 +30,7 @@ async function checkCurrentAuth() {
   })
   const responseJson = await response.json()
   if (responseJson.code !== 0)
-    window.location.href = '/password'
+    window.location.href = import.meta.env.ASSETS_PREFIX +'/password'
 }
 checkCurrentAuth()
 </script>

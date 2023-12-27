@@ -66,4 +66,7 @@ export default defineConfig({
       process.env.OUTPUT === 'netlify' && disableBlocks(),
     ],
   },
+  build: {
+    assetsPrefix: 'https://www.iqduke.com/chat'
+  },
 })
