@@ -30,6 +30,7 @@ export default defineConfig({
         description: 'Minimal web UI for Gemini Pro.',
         theme_color: '#212129',
         background_color: '#ffffff',
+        start_url:"/chat/",
         icons: [
           {
             src: 'pwa-192.png',
