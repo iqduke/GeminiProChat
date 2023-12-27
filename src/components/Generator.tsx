@@ -101,7 +101,7 @@ export default () => {
         parts: [{ text: message.content }],
       })).slice(-maxHistoryMessages)
       const timestamp = Date.now()
-      const response = await fetch('/api/generate', {
+      const response = await fetch(import.meta.env.ASSETS_PREFIX +'/api/generate', {
         method: 'POST',
         body: JSON.stringify({
           messages: convertReqMsgList(requestMessageList),
